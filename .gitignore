@@ -1,0 +1,6 @@
+/target/
+/.settings/
+/.classpath
+/.idea/
+.project
+cinema.iml
