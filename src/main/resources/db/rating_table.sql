@@ -1,6 +1,6 @@
-DROP TABLE rating_table;
-DROP TYPE type_rating_objects FORCE;
-DROP TYPE Rating_List FORCE;
+-- DROP TABLE IF EXISTS rating_table;
+-- DROP TYPE IF EXISTS type_rating_objects FORCE;
+-- DROP TYPE IF EXISTS Rating_List FORCE;
 
 CREATE TABLE rating_table (
   MOVIE_NAME   VARCHAR2(500),

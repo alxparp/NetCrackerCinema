@@ -9,9 +9,9 @@
     <version>1.0-SNAPSHOT</version>
     <name>cinema</name>
 
-    <prerequisites>
-        <maven>3</maven>
-    </prerequisites>
+    <!--<prerequisites>-->
+        <!--<maven>3</maven>-->
+    <!--</prerequisites>-->
 
     <properties>
         <vaadin.version>7.7.3</vaadin.version>
@@ -22,6 +22,7 @@
         <!-- If there are no local customisations, this can also be "fetch" or "cdn" -->
         <vaadin.widgetset.mode>local</vaadin.widgetset.mode>
         <vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
+        <ojdbcVersion>12.2.0.1</ojdbcVersion>
     </properties>
 
     <repositories>
@@ -29,11 +30,11 @@
         <!-- For Oracle JDBC driver -->
         <repository>
             <id>Jahia</id>
-            <url>http://maven.jahia.org/maven2/</url>
+            <url>https://maven.jahia.org/maven2/</url>
         </repository>
         <repository>
             <id>vaadin-addons</id>
-            <url>http://maven.vaadin.com/vaadin-addons</url>
+            <url>https://maven.vaadin.com/vaadin-addons</url>
         </repository>
         <repository>
             <id>spring-snapshots</id>
@@ -42,6 +43,10 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
+        </repository>
+        <repository>
+            <id>project-repo</id>
+            <url>file://${basedir}/libs</url>
         </repository>
     </repositories>
 
@@ -102,10 +107,15 @@
             <artifactId>vaadin-spring</artifactId>
             <version>1.0.1</version>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.oracle</groupId>-->
+            <!--<artifactId>ojdbc6</artifactId>-->
+            <!--<version>11.1.0.7.0</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.oracle</groupId>
-            <artifactId>ojdbc6</artifactId>
-            <version>11.1.0.7.0</version>
+            <artifactId>ojdbc8</artifactId>
+            <version>${ojdbcVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -167,13 +177,19 @@
             <version>2.2.9</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.projectlombok/lombok &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.projectlombok</groupId>-->
+            <!--<artifactId>lombok</artifactId>-->
+            <!--<version>1.16.10</version>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/uk.co.jemos.podam/podam &ndash;&gt;-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.10</version>
+            <version>1.18.24</version>
+            <scope>provided</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/uk.co.jemos.podam/podam -->
         <dependency>
             <groupId>uk.co.jemos.podam</groupId>
             <artifactId>podam</artifactId>

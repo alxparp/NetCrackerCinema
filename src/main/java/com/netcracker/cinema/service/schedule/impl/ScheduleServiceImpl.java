@@ -8,6 +8,7 @@ import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -30,14 +31,14 @@ public class ScheduleServiceImpl implements ScheduleService {
     @Override
     public void createTask(Date seanceDate, Long seanceId) {
         Date date = new Date(seanceDate.getTime()-1000*60*60); // your date
-        java.util.Calendar cal = java.util.Calendar.getInstance();
+        Calendar cal = Calendar.getInstance();
         cal.setTime(date);
-        int year = cal.get(java.util.Calendar.YEAR);
-        int month = cal.get(java.util.Calendar.MONTH);
-        int day = cal.get(java.util.Calendar.DAY_OF_MONTH);
-        int hour = cal.get(java.util.Calendar.HOUR_OF_DAY);
-        int minute = cal.get(java.util.Calendar.MINUTE);
-        int seconds = cal.get(java.util.Calendar.SECOND);
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        int hour = cal.get(Calendar.HOUR_OF_DAY);
+        int minute = cal.get(Calendar.MINUTE);
+        int seconds = cal.get(Calendar.SECOND);
 
         if(seanceId != 0) {
             deleteTask(seanceId);

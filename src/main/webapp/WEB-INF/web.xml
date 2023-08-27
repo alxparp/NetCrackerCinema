@@ -5,6 +5,7 @@
          version="3.1">
 
     <display-name>NetCrackerCinema</display-name>
+
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>

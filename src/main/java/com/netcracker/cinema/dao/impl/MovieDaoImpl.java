@@ -29,7 +29,7 @@ public class MovieDaoImpl implements MovieDao {
     }
 
     @Override
-    public List<Movie> findAll() {
+    public List<Movie> findAll() throws CinemaDaoException {
         try {
             List<Movie> movies = jdbcTemplate.query(FIND_ALL_SQL, new MovieMapper());
             LOGGER.info("Found " + movies.size() + " movie objects");

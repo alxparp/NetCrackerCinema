@@ -11,6 +11,19 @@
         </webroots>
       </configuration>
     </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/webapp/WEB-INF/dispatcher-context.xml</file>
+          <file>file://$MODULE_DIR$/webapp/WEB-INF/spring-security.xml</file>
+          <file>file://$MODULE_DIR$/resources/spring/datasource-config.xml</file>
+          <file>file://$MODULE_DIR$/resources/spring/transaction-config.xml</file>
+          <file>file://$MODULE_DIR$/webapp/WEB-INF/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/java/com/netcracker/cinema/web/CinemaConfiguration.java</file>
+          <file>file://$MODULE_DIR$/java/com/netcracker/cinema/service/config/MailConfiguration.java</file>
+        </fileset>
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -20,5 +33,27 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.3.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.3.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.vaadin.external.slf4j:vaadin-slf4j-jdk14:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:4.3.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: log4j:log4j:1.2.14" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.24" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:4.3.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-core:4.3.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:4.3.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: uk.co.jemos.podam:podam:4.6.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.velocity:velocity:1.7" level="project" />
+    <orderEntry type="library" name="Maven: javax.mail:mail:1.4.7" level="project" />
+    <orderEntry type="library" name="Maven: org.quartz-scheduler:quartz:2.2.1" level="project" />
+    <orderEntry type="library" name="Maven: com.vaadin:vaadin-spring:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.vaadin:vaadin-server:7.7.3" level="project" />
+    <orderEntry type="library" name="Maven: commons-validator:commons-validator:1.5.1" level="project" />
+    <orderEntry type="library" name="Maven: com.vaadin:vaadin-shared:7.7.3" level="project" />
+    <orderEntry type="library" name="Maven: org.vaadin.addons:filteringtable:0.9.15.v7" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-web:4.3.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:4.2.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:4.2.0.RELEASE" level="project" />
   </component>
 </module>
